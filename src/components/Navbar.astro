@@ -1,24 +1,30 @@
 ---
 const navItems = [
-    { href: '/', label: 'Inicio' },
-    { href: '/club', label: 'El Club' },
-    { href: '/entrenamientos', label: 'Entrenamientos' },
-];
+  { href: '/', label: 'Inicio' },
+  { href: '/club', label: 'El Club' },
+  { href: '/entrenamientos', label: 'Entrenamientos' },
+]
 ---
 
 <nav aria-label="Navegación principal">
-    <ul>
-        {navItems.map((item) => (
-                <li>
-                    <a href={import.meta.env.BASE_URL + item.href}>{item.label}</a>
-                </li>
-        ))}
-    </ul>
+  <ul>
+    {
+      navItems.map((item) => (
+        <li>
+          <a href={import.meta.env.BASE_URL + item.href}>{item.label}</a>
+        </li>
+      ))
+    }
+  </ul>
 </nav>
 
 <style>
-    /* Tu CSS aquí. Astro hace scope automático, pero para este proyecto
+  /* Tu CSS aquí. Astro hace scope automático, pero para este proyecto
        quizás prefieras usar clases globales o CSS externo para cumplir
        con el requisito de "CSS puro" en la salida. */
-    ul { list-style: none; display: flex; gap: 1rem; }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
 </style>

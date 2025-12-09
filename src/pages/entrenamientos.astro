@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Entrenamientos">
+  <h2>Horarios de Entrenamiento</h2>
+  <p>
+    Consulta nuestros horarios semanales. Todos los niveles son bienvenidos.
+  </p>
+
+  <div class="tabla-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Día</th>
+          <th>Hora</th>
+          <th>Actividad</th>
+          <th>Lugar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Martes</td>
+          <td>19:30</td>
+          <td>Series en Pista</td>
+          <td>Polideportivo</td>
+        </tr>
+        <tr>
+          <td>Jueves</td>
+          <td>19:30</td>
+          <td>Fuerza</td>
+          <td>Parque Central</td>
+        </tr>
+        <tr>
+          <td>Sábado</td>
+          <td>09:00</td>
+          <td>Tirada Larga</td>
+          <td>Fuente Principal</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>¿Qué necesitas traer?</h3>
+  <ul>
+    <li>Zapatillas de correr</li>
+    <li>Ropa cómoda</li>
+    <li>Botella de agua</li>
+    <li>Muchas ganas</li>
+  </ul>
+</Layout>
+
+<style>
+  /* CSS Básico y legible */
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Para que los bordes se junten */
+    margin-bottom: 2rem;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: #eee;
+    font-weight: bold;
+  }
+
+  /* Un pequeño ajuste para que no se rompa en móvil si la tabla es ancha */
+  .tabla-container {
+    overflow-x: auto;
+  }
+</style>
