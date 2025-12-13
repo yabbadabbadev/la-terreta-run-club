@@ -53,10 +53,7 @@ jobs:
               run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
             - name: Build with Astro
-              run: |
-                  ${{ steps.detect-package-manager.outputs.runner }} astro build \
-                    --site "${{ steps.pages.outputs.origin }}" \
-                    --base "${{ steps.pages.outputs.base_path }}"
+              run: npm run build
 
             - name: Debug - Show HTML content
               run: cat dist/index.html
