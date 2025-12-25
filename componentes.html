@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Club de Running - Componentes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      main {
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 6px;
+      }
+
+      .row--dark {
+        background: #989898;
+      }
+
+      .box {
+        margin-bottom: 24px;
+      }
+
+      .box--mobile {
+        width: 320px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Componentes</h1>
+
+    <main>
+      <div class="box box--mobile">
+        <code><strong>Product Card</strong></code>
+        <article class="product-card">
+          <figure class="product-card__image-container">
+            <img
+              class="product-card__image"
+              src="assets/images/camiseta-tecnica-blanca.jpg"
+              alt="Camiseta técnica color blanco"
+            />
+          </figure>
+          <div class="product-card__details">
+            <div class="product-card__info">
+              <h2 class="body-title">Camiseta técnica</h2>
+              <div class="product-card__price">24€</div>
+            </div>
+            <button class="button button--primary button--small">¡Lo quiero!</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="box box--mobile">
+        <code><strong>Activity Card</strong></code>
+        <article class="activity-card">
+          <figure class="activity-card__image-container">
+            <img
+              class="activity-card__image"
+              src="assets/images/torres-de-serrano.jpg"
+              alt="Camiseta técnica color blanco"
+            />
+          </figure>
+          <div class="activity-card__details">
+            <div class="activity-card__info">
+              <div class="activity-card__date">21 sep 2025</div>
+              <h2 class="activity-card__title">
+                En un lugar de la mancha de cuyo nombre no quiero
+              </h2>
+              <div class="activity-card__meta-datas">
+                <div class="activity-card__meta-data">
+                  <h5 class="activity-card__meta-data-title">Dificultad</h5>
+                  <div class="chip chip--success">Principiante</div>
+                </div>
+                <div class="activity-card__meta-data">
+                  <h5 class="activity-card__meta-data-title">Actividad</h5>
+                  <div class="chip">Running</div>
+                </div>
+                <div class="activity-card__meta-data">
+                  <h5 class="activity-card__meta-data-title">Nivel</h5>
+                  <div class="chip chip--success">Fácil</div>
+                </div>
+              </div>
+            </div>
+            <button class="button button--primary button--small">Ver más</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="box">
+        <code><strong>Button</strong></code>
+        <br />
+        <code>Primary</code>
+        <div class="row">
+          <button class="button button--primary button--small">small</button>
+          <button class="button button--primary button--medium">medium</button>
+          <button class="button button--primary button--large">large</button>
+        </div>
+        <code>Secondary</code>
+        <div class="row">
+          <button class="button button--secondary button--small">small</button>
+          <button class="button button--secondary button--medium">medium</button>
+          <button class="button button--secondary button--large">large</button>
+        </div>
+        <code>Secondary</code>
+        <div class="row">
+          <button class="button button--tertiary button--small">small</button>
+          <button class="button button--tertiary button--medium">medium</button>
+          <button class="button button--tertiary button--large">large</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <code><strong>Chip</strong></code>
+        <br />
+        <div class="row">
+          <div class="chip">Galería</div>
+          <div class="chip chip--success">Fácil</div>
+          <div class="chip chip--warning">Media</div>
+          <div class="chip chip--danger">Difícil</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

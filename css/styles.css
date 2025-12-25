@@ -1,9 +1,24 @@
+/***************************/
+/* ------ VARIABLES ------ */
+/***************************/
 :root {
+  /* ------ Colors ------ */
+  --primary-accent: #7bdf89;
+  --secondary-accent: #fbee6c;
+  --tertiary-accent: #32548a;
+  --white: #ffffff;
+  --medium-light-grey: #efefef;
+  --black: #0d1624;
+
+  /********** REVISAR ***********/
   --color-primary: #2c3e50;
   --color-accent: #3b82f6;
   --bg-light: #f8fafc;
 }
 
+/***********************/
+/* ------ RESET ------ */
+/***********************/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,16 +27,326 @@
 
 body {
   font-family:
+    Montserrat,
+    sans-serif,
     system-ui,
-    -apple-system,
-    sans-serif;
-  line-height: 1.6;
-  color: #333;
+    -apple-system;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+  color: var(--black);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/***************************/
+/* ------ UTILITIES ------ */
+/***************************/
+.dark-gradient {
+  background: linear-gradient(180deg, var(--tertiary-accent) 0%, var(--black) 50%);
+}
+
+.light-gradient {
+  background: linear-gradient(180deg, var(--secondary-accent) 0%, var(--primary-accent) 100%);
+}
+
+/****************************/
+/* ------ TYPOGRAPHY ------ */
+/****************************/
+.page-title {
+  font-family: Montserrat, sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: Montserrat, sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.body-title {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+}
+
+.body-text {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+}
+
+.block-title {
+  font-family: Montserrat, sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.single-title {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.015em;
+}
+
+.caption {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 54px;
+    line-height: 72px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  .body-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .body-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .block-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .single-title {
+    font-size: 48px;
+    line-height: 68px;
+  }
+
+  .caption {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+/****************************/
+/* ------ COMPONENTS ------ */
+/****************************/
+
+/* ------ Button ------ */
+.button {
+  all: unset;
+  display: inline-block;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 40px;
+  text-transform: uppercase;
+}
+
+/* sizes */
+.button--small {
+  padding: 10px 24px;
+  font-size: 14px;
+}
+
+.button--medium {
+  padding: 16px 40px;
+  font-size: 16px;
+}
+
+.button--large {
+  padding: 24px 60px;
+  font-size: 20px;
+}
+
+/* colors */
+.button--primary {
+  background-color: var(--primary-accent);
+  color: var(--black);
+}
+
+.button--primary:hover {
+  background-color: #87eb95;
+}
+
+.button--primary:active {
+  background-color: #71ca7d;
+}
+
+.button--secondary {
+  background-color: var(--secondary-accent);
+  color: var(--black);
+}
+
+.button--secondary:hover {
+  background-color: #fff486;
+}
+
+.button--secondary:active {
+  background-color: #ebde63;
+}
+
+.button--tertiary {
+  background-color: var(--tertiary-accent);
+  color: var(--white);
+}
+
+.button--tertiary:hover {
+  background-color: #3f67a7;
+}
+
+.button--tertiary:active {
+  background-color: #243a5e;
+}
+
+/* ------ Product Card ------ */
+.product-card {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--medium-light-grey);
+}
+
+.product-card__image-container {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.product-card__image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card__details {
+  padding: 24px;
+}
+
+.product-card__info {
+  margin-bottom: 12px;
+}
+
+.product-card__price {
+  font-size: 16px;
+}
+
+/* ------ Activity Card ------ */
+.activity-card {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--medium-light-grey);
+}
+
+.activity-card__image-container {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.activity-card__image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.activity-card__details {
+  padding: 24px;
+}
+
+.activity-card__info {
+  margin-bottom: 12px;
+}
+
+.activity-card__date {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.activity-card__title {
+  font-size: 20px;
+}
+
+.activity-card__meta-datas {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.activity-card__meta-data-title {
+  font-size: 8px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.activity-card__meta-data {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ------ Chip ------ */
+.chip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 10px;
+  gap: 6px;
+  background: var(--white);
+  font-size: 12px;
+  justify-content: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 16px;
+}
+
+.chip--success::before,
+.chip--warning::before,
+.chip--danger::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.chip--success::before {
+  background: #27ae60;
+}
+
+.chip--warning::before {
+  background: #f3ae00;
+}
+
+.chip--danger::before {
+  background: #f74a10;
+}
+
+/************** REVISAR ***************/
 /* Main */
 main {
   flex: 1;
