@@ -310,6 +310,41 @@ body {
   gap: 4px;
 }
 
+/* ------ Community Card ------ */
+.community-card {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--medium-light-grey);
+}
+
+.community-card__image-container {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.community-card__image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.community-card__details {
+  padding: 24px;
+}
+
+.community-card__info {
+  margin-bottom: 12px;
+}
+
+.community-card__date {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.community-card__title {
+  font-size: 20px;
+}
+
 /* ------ Chip ------ */
 .chip {
   display: flex;
