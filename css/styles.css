@@ -314,12 +314,17 @@ body {
 .community-card {
   border-radius: 24px;
   overflow: hidden;
-  background: var(--medium-light-grey);
 }
 
 .community-card__image-container {
-  border-radius: 24px;
-  overflow: hidden;
+  position: relative;
+}
+
+.community-card__image-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
 }
 
 .community-card__image {
@@ -330,10 +335,24 @@ body {
 
 .community-card__details {
   padding: 24px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.community-card__details .chip {
+  align-self: flex-end;
 }
 
 .community-card__info {
   margin-bottom: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--white);
 }
 
 .community-card__date {
@@ -347,7 +366,7 @@ body {
 
 /* ------ Chip ------ */
 .chip {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   padding: 6px 10px;
