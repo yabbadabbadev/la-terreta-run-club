@@ -402,6 +402,7 @@ select.form-field__control {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  cursor: grab;
 }
 
 .community-card__image-container--slider::-webkit-scrollbar {
@@ -463,6 +464,20 @@ select.form-field__control {
   font-size: 20px;
 }
 
+.community-card__dots-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px;
+}
+
+.community-card__dot-indicator {
+  background: var(--white);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
 /* ------ Chip ------ */
 .chip {
   display: inline-flex;
