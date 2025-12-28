@@ -390,10 +390,27 @@ select.form-field__control {
 .community-card {
   border-radius: 24px;
   overflow: hidden;
+  position: relative;
+  max-width: 392px;
 }
 
 .community-card__image-container {
-  position: relative;
+}
+
+.community-card__image-container--slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.community-card__image-container--slider::-webkit-scrollbar {
+  display: none;
+}
+
+.community-card__image-container--slider .community-card__image {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
 }
 
 .community-card__image-container::before {
@@ -401,6 +418,7 @@ select.form-field__control {
   position: absolute;
   inset: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
 }
 
 .community-card__image {
@@ -416,6 +434,11 @@ select.form-field__control {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  pointer-events: none;
+}
+
+.community-card__details .button {
+  pointer-events: auto;
 }
 
 .community-card__details .chip {
