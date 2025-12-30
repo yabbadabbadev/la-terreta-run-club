@@ -800,6 +800,8 @@ details[open] .filters__toggler-icon {
   cursor: pointer;
   padding: 0.5rem;
   list-style: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header__summary::-webkit-details-marker {
@@ -811,19 +813,28 @@ details[open] .filters__toggler-icon {
 }
 
 .header__nav--mobile {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition:
+    opacity 0.2s ease,
+    transform 0.25s ease;
   width: 100%;
   background-color: var(--black);
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 1;
+  opacity: 0;
+  transform: scaleY(0.9);
+  transform-origin: top;
+  pointer-events: none;
+  will-change: transform, opacity;
+  user-select: none;
 }
 
 .header__details[open] .header__nav--mobile {
-  max-height: 500px;
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
 }
 
 .header__menu {
@@ -924,7 +935,7 @@ details[open] .filters__toggler-icon {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -970,6 +981,7 @@ details[open] .filters__toggler-icon {
   .footer__columns {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .footer__legal-links {
