@@ -864,6 +864,10 @@ details[open] .filters__toggler-icon {
   color: var(--primary-accent);
 }
 
+.header__link[aria-current='page'] {
+  color: var(--primary-accent);
+}
+
 .header__hamburger {
   display: block;
   width: 25px;
