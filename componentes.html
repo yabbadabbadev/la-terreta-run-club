@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -269,6 +269,7 @@
           <section class="filters filters--mobile">
             <details class="filters__details">
               <summary class="filters__toggler">
+                <span class="sr-only">Abrir filtros</span>
                 <svg
                   class="filters__toggler-icon"
                   width="23"
@@ -307,11 +308,11 @@
                 <div class="form-field month-year-picker">
                   <label class="form-field__label">Fecha</label>
                   <div class="month-year-picker__control">
-                    <button class="month-year-picker__button">
+                    <button class="month-year-picker__button" type="button">
                       <img src="assets/svg/arrow-left.svg" alt="Mes anterior" />
                     </button>
                     <div class="month-year-picker__date">Diciembre 2025</div>
-                    <button class="month-year-picker__button">
+                    <button class="month-year-picker__button" type="button">
                       <img src="assets/svg/arrow-right.svg" alt="Mes siguiente" />
                     </button>
                   </div>
@@ -345,11 +346,11 @@
               <div class="form-field month-year-picker">
                 <label class="form-field__label">Fecha</label>
                 <div class="month-year-picker__control">
-                  <button class="month-year-picker__button">
+                  <button class="month-year-picker__button" type="button">
                     <img src="assets/svg/arrow-left.svg" alt="Mes anterior" />
                   </button>
                   <div class="month-year-picker__date">Diciembre 2025</div>
-                  <button class="month-year-picker__button">
+                  <button class="month-year-picker__button" type="button">
                     <img src="assets/svg/arrow-right.svg" alt="Mes siguiente" />
                   </button>
                 </div>
@@ -385,11 +386,11 @@
           <div class="form-field month-year-picker">
             <label class="form-field__label">Fecha</label>
             <div class="month-year-picker__control">
-              <button class="month-year-picker__button">
+              <button class="month-year-picker__button" type="button">
                 <img src="assets/svg/arrow-left.svg" alt="Mes anterior" />
               </button>
               <div class="month-year-picker__date">Diciembre 2025</div>
-              <button class="month-year-picker__button">
+              <button class="month-year-picker__button" type="button">
                 <img src="assets/svg/arrow-right.svg" alt="Mes siguiente" />
               </button>
             </div>
@@ -499,9 +500,14 @@
           <div class="footer__column">
             <h4 class="block-title">Suscríbete a la newsletter</h4>
             <form class="footer__subscribe-form" action="#">
-              <label>
-                <input class="form-field__control" type="text" placeholder="escribe tu email" />
-              </label>
+              <label class="sr-only" for="footerNewsletterEmail">Email</label>
+              <input
+                class="form-field__control"
+                id="footerNewsletterEmail"
+                type="email"
+                placeholder="escribe tu email"
+                autocomplete="email"
+              />
               <button class="button button--primary button--small">suscríbete</button>
             </form>
           </div>
