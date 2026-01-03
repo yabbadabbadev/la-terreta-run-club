@@ -520,7 +520,14 @@ main {
 }
 
 .row--justify-end {
-  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 32px;
 }
 
 @media (min-width: 768px) {
@@ -534,12 +541,25 @@ main {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .row--justify-start {
+    justify-content: flex-start;
+  }
+
+  .row--justify-center {
+    justify-content: center;
+  }
+
+  .row--roomy {
+    gap: 124px;
+  }
 }
 
 /*****************************/
 /* ------ FORM FIELDS ------ */
 /*****************************/
 .form-field {
+  width: 100%;
 }
 
 .form-field__label {
@@ -1016,6 +1036,7 @@ select.form-field__control {
 .filters {
   background-color: var(--white);
   padding: 16px;
+  width: 100%;
 }
 
 .filters--desktop {
@@ -1024,6 +1045,9 @@ select.form-field__control {
 
 .filters__details {
   position: relative;
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .filters__toggler {
@@ -1096,6 +1120,24 @@ details[open] .filters__toggler-icon {
   width: 8px;
   height: 8px;
   border-radius: 50%;
+}
+
+/* ------ Navigation ------ */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__link {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.navigation__link--is-inactive {
+  opacity: 0.4;
 }
 
 /* ------ CTA ------ */
@@ -1372,7 +1414,7 @@ details[open] .filters__toggler-icon {
   background: var(--medium-light-grey);
 }
 
-.partners .block-title {
+.partners .section-title {
   text-align: center;
 }
 
@@ -1396,5 +1438,55 @@ details[open] .filters__toggler-icon {
     gap: 56px;
     justify-items: center;
     justify-content: center;
+  }
+}
+
+/* ------ Coaches ------ */
+.coaches {
+  background: var(--medium-light-grey);
+}
+
+.coaches__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.coaches .section-title {
+  text-align: center;
+}
+
+.coaches__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.coaches__figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.coaches__image-container {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.coaches__image-container img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .coaches__list {
+    flex-direction: row;
+    gap: 124px;
   }
 }
