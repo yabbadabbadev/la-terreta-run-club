@@ -862,6 +862,10 @@ select.form-field__control {
   .photo-text-block__details {
     justify-content: center;
   }
+
+  .photo-text-block--reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 /* ------ Activity Card ------ */
