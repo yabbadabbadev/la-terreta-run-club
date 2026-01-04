@@ -112,7 +112,7 @@
           class="hero-block"
           aria-label="Imagen principal de la actividad: Preparación para 10K en el cauce del río"
         >
-          <figure class="hero-block__image-container">
+          <figure class="hero-block__image-container" tabindex="0" aria-label="Carrusel de actividades">
             <img
               class="hero-block__image"
               src="assets/images/actividades/preparacion-10k.jpg"
@@ -166,7 +166,11 @@
             <h2 class="caption color-tertiary">Puntos de interés</h2>
           </div>
           <div class="points-of-interest-slider">
-            <div class="points-of-interest-slider__container">
+            <div
+              class="points-of-interest-slider__container"
+              tabindex="0"
+              aria-label="Puntos de interés"
+            >
               <article class="activity-card">
                 <figure class="activity-card__image-container">
                   <img

@@ -1168,7 +1168,7 @@ details[open] .filters__toggler-icon {
 }
 
 .navigation__link--is-inactive {
-  opacity: 0.4;
+  opacity: 0.65;
 }
 
 /* ------ CTA ------ */
