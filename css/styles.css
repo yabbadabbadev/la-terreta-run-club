@@ -37,10 +37,7 @@
 }
 
 body {
-  font-family:
-    Montserrat,
-    sans-serif,
-    system-ui;
+  font-family: Montserrat, sans-serif, system-ui;
   letter-spacing: -0.015em;
   color: var(--black);
   min-height: 100vh;
@@ -590,7 +587,7 @@ main {
 }
 
 .form-field__control::placeholder {
-  color: #bbc7c8;
+  color: #6b6f76;
 }
 
 .form-field__control:focus {
@@ -769,11 +766,11 @@ select.form-field__control {
   scroll-snap-align: start;
 }
 
-.hero-block::before {
+.hero-block--has-overlay::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.6);
   pointer-events: none;
   z-index: 1;
 }
