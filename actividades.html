@@ -153,7 +153,10 @@
 
                   <div class="form-field month-year-picker">
                     <span class="form-field__label" id="filters_date_label_mobile">Fecha</span>
-                    <div class="month-year-picker__control" aria-labelledby="filters_date_label_mobile">
+                    <div
+                      class="month-year-picker__control"
+                      aria-labelledby="filters_date_label_mobile"
+                    >
                       <button class="month-year-picker__button" type="button">
                         <img src="assets/svg/arrow-left.svg" alt="Mes anterior" />
                       </button>
@@ -200,7 +203,10 @@
 
                 <div class="form-field month-year-picker">
                   <span class="form-field__label" id="filters_date_label_desktop">Fecha</span>
-                  <div class="month-year-picker__control" aria-labelledby="filters_date_label_desktop">
+                  <div
+                    class="month-year-picker__control"
+                    aria-labelledby="filters_date_label_desktop"
+                  >
                     <button class="month-year-picker__button" type="button">
                       <img src="assets/svg/arrow-left.svg" alt="Mes anterior" />
                     </button>
@@ -411,11 +417,14 @@
           </article>
         </div>
         <div class="navigation pt-l">
-          <a href="#" class="navigation__link navigation__link--is-inactive">
+          <a
+            href="https://example.com/anterior"
+            class="navigation__link navigation__link--is-inactive"
+          >
             <img src="assets/svg/arrow-left.svg" alt="Página anterior" />
             Anterior
           </a>
-          <a href="#" class="navigation__link">
+          <a href="https://example.com/siguiente" class="navigation__link">
             Siguiente
             <img src="assets/svg/arrow-right.svg" alt="Página siguiente" />
           </a>
@@ -440,17 +449,23 @@
         </div>
         <div class="footer__column">
           <h3 class="block-title">Contacto</h3>
-          <a href="mailto:yeswerun@laterretarunclub.com" target="_blank">
+          <a href="mailto:yeswerun@laterretarunclub.com" target="_blank" rel="noopener noreferrer">
             yeswerun@laterretarunclub.com
           </a>
           <div class="footer__social-logos">
-            <a href="https://example.com/instagram" class="footer__icon" target="_blank">
+            <a
+              href="https://example.com/instagram"
+              class="footer__icon"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="assets/svg/instagram-logo.svg" alt="Síguenos en Instagram" />
             </a>
             <a
               href="https://example.com/whatsapp"
               class="footer__icon"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img src="assets/svg/whatsapp-logo.svg" alt="Contacta con nosotros en Whatsapp" />
             </a>
@@ -458,7 +473,11 @@
         </div>
         <div class="footer__column">
           <h3 class="block-title">Suscríbete a la newsletter</h3>
-          <form class="footer__subscribe-form" action="https://example.com/newsletter" method="post">
+          <form
+            class="footer__subscribe-form"
+            action="https://example.com/newsletter"
+            method="post"
+          >
             <label class="sr-only" for="footerNewsletterEmail">Email</label>
             <input
               class="form-field__control"
@@ -468,7 +487,7 @@
               autocomplete="email"
             />
             <button class="button button--primary button--small" type="submit">suscríbete</button>
-          </div>
+          </form>
         </div>
       </div>
       <div class="footer__legal-links">
