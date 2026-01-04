@@ -101,6 +101,18 @@
     <main>
       <section class="layout-section layout-section--boxed py-xl">
         <h1 class="page-title color-tertiary pb-s">Tienda</h1>
+        <div class="row row--justify-end pb-m">
+          <form class="sorting__form">
+            <div class="form-field">
+              <label class="form-field__label" for="sort">Ordenar</label>
+              <select class="form-field__control" id="sort">
+                <option value="price-asc">Precio de menor a mayor</option>
+                <option value="price-desc">Precio de mayor a menor</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
         <div class="cards-grid">
           <article class="product-card">
             <figure class="product-card__image-container">

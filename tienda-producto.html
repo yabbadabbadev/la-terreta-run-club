@@ -18,14 +18,23 @@
       crossorigin
     />
     <title>La Terreta Run Club - Producto</title>
-    <meta name="description" content="En La Terreta Run Club creemos que correr es más que sumar kilómetros: es descubrir la ciudad, compartir energía y construir una comunidad con identidad propia." />
+    <meta
+      name="description"
+      content="En La Terreta Run Club creemos que correr es más que sumar kilómetros: es descubrir la ciudad, compartir energía y construir una comunidad con identidad propia."
+    />
     <meta property="og:title" content="La Terreta Run Club - Producto" />
-    <meta property="og:description" content="En La Terreta Run Club creemos que correr es más que sumar kilómetros: es descubrir la ciudad, compartir energía y construir una comunidad con identidad propia." />
+    <meta
+      property="og:description"
+      content="En La Terreta Run Club creemos que correr es más que sumar kilómetros: es descubrir la ciudad, compartir energía y construir una comunidad con identidad propia."
+    />
     <meta
       property="og:image"
       content="https://yabbadabbadev.github.io/la-terreta-run-club/assets/images/slider-actividades.jpg"
     />
-    <meta property="og:url" content="https://yabbadabbadev.github.io/la-terreta-run-club/tienda-producto.html" />
+    <meta
+      property="og:url"
+      content="https://yabbadabbadev.github.io/la-terreta-run-club/tienda-producto.html"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -90,7 +99,99 @@
     <!-- End: Header -->
 
     <main>
-      <h1>Producto</h1>
+      <section class="layout-section layout-section--boxed py-xl">
+        <div class="single-product">
+          <figure class="single-product__image-container">
+            <img
+              src="assets/images/camiseta-tecnica-single-product.jpg"
+              class="single-product__image"
+              alt="Camiseta técnica"
+            />
+          </figure>
+          <div class="single-product__details">
+            <div class="single-product__info">
+              <h2 class="single-title">Camiseta técnica</h2>
+              <p class="single-product__description">
+                Camiseta ligera y transpirable diseñada para entrenar con comodidad en cualquier
+                época del año. Su tejido de secado rápido mantiene la piel fresca y te permite
+                moverte con total libertad en tus rutas por la ciudad o el río. Ideal para sesiones
+                intensas o para disfrutar del running urbano con estilo.
+              </p>
+              <div class="form-field">
+                <label class="form-field__label" for="size">Talla</label>
+                <select class="form-field__control" id="size">
+                  <option value="xs">XS</option>
+                  <option value="s">S</option>
+                  <option value="m">M</option>
+                  <option value="l">L</option>
+                  <option value="xl">XL</option>
+                </select>
+              </div>
+              <div class="single-product__price">24€</div>
+            </div>
+            <button class="button button--primary button--medium">¡Lo quiero!</button>
+          </div>
+        </div>
+      </section>
+      <section class="layout-section layout-section--boxed pt-s pb-xl">
+        <h2 class="section-title color-tertiary pb-m">Productos relacionados</h2>
+        <div class="cards-grid">
+          <article class="product-card">
+            <figure class="product-card__image-container">
+              <img
+                class="product-card__image"
+                src="assets/images/camiseta-tecnica-blanca.jpg"
+                alt="Camiseta técnica color blanco"
+              />
+            </figure>
+            <div class="product-card__details">
+              <div class="product-card__info">
+                <h2 class="body-title">Camiseta técnica</h2>
+                <div class="product-card__price">24€</div>
+              </div>
+              <a href="tienda-producto.html" class="button button--primary button--small">
+                ¡Lo quiero!
+              </a>
+            </div>
+          </article>
+          <article class="product-card">
+            <figure class="product-card__image-container">
+              <img
+                class="product-card__image"
+                src="assets/images/camiseta-tecnica-blanca.jpg"
+                alt="Camiseta técnica color blanco"
+              />
+            </figure>
+            <div class="product-card__details">
+              <div class="product-card__info">
+                <h2 class="body-title">Camiseta técnica</h2>
+                <div class="product-card__price">24€</div>
+              </div>
+              <a href="tienda-producto.html" class="button button--primary button--small">
+                ¡Lo quiero!
+              </a>
+            </div>
+          </article>
+          <article class="product-card">
+            <figure class="product-card__image-container">
+              <img
+                class="product-card__image"
+                src="assets/images/camiseta-tecnica-blanca.jpg"
+                alt="Camiseta técnica color blanco"
+              />
+            </figure>
+            <div class="product-card__details">
+              <div class="product-card__info">
+                <h2 class="body-title">Camiseta técnica</h2>
+                <div class="product-card__price">24€</div>
+              </div>
+              <a href="tienda-producto.html" class="button button--primary button--small">
+                ¡Lo quiero!
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->

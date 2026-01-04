@@ -550,6 +550,10 @@ main {
     justify-content: center;
   }
 
+  .row--justify-end {
+    justify-content: flex-end;
+  }
+
   .row--roomy {
     gap: 124px;
   }
@@ -1489,4 +1493,61 @@ details[open] .filters__toggler-icon {
     flex-direction: row;
     gap: 124px;
   }
+}
+
+/* ------ Single product ------ */
+.single-product {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.single-product .single-title {
+  color: var(--tertiary-accent);
+}
+
+.single-product .form-field {
+  max-width: 200px;
+}
+
+.single-product__image-container {
+}
+
+.single-product__image {
+  display: block;
+}
+
+.single-product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.single-product__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.single-product__description {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.single-product__price {
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  .single-product {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+/* ------ Testimonials ------ */
+.sorting__form .form-field {
+  max-width: 280px;
 }
